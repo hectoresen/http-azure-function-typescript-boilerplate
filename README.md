@@ -1,18 +1,19 @@
 # http-azure-function-typescript-boilerplate
 
-### Local
+### Project Initialization
 
-Initialize as typescript project
+1. **Initialize the project with TypeScript**:
+
 ```bash
 func init --worker-runtime typescript
 ```
 
-A build must be created for each change in code
+2. **Compile the code, remember to do it for each change**
 ```bash
 npm run build
 ```
 
-Launch function
+3. **Launch the function**
 ```bash
 npm start
 ```
@@ -21,8 +22,7 @@ Now the console should show the exposed endpoints
 
 ### Environment Variables
 
-You can see a list of the environment variables in the .env.dist file
-Environment variables are added to local.settings.json
+Environment variables are listed in the `.env.dist` file and should be added to `local.settings.json`.
 
 Example:
 ```
@@ -38,9 +38,9 @@ Example:
 
 ### Testing
 
-The current tests are end to end, one of the problems is the cold starts of the functions on which it depends, momentarily we must warm up these functions before launching the tests so as not to exceed the jest waiting time
+Current testing is end-to-end. One problem is cold starting of dependent functions. To avoid timing out Jest, be sure to warm up these functions before running tests when they are run through the pipelines.
 
-Once the functions are "warmed up", execute the following command:
+
 ```bash
 npm run test
 ```
