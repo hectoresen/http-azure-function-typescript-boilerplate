@@ -11,8 +11,8 @@
     "start": "func start",
     "test": "jest",
     "start:dev": "npm-run-all --parallel start watch",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix"
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix"
   },
   "dependencies": {
     "@azure/functions": "^4.0.0"

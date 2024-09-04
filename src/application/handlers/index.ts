@@ -1,14 +1,14 @@
-import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
+import { HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
 
 export class AppHandler {
-    constructor() {}
+  constructor() {}
 
-    async httpExample(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
-        return {
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: 'Hello world'
-        };
-    }
+  async httpExample(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
+    return {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: 'Hello world'
+    };
+  }
 }
